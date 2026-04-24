@@ -50,7 +50,7 @@ Change the HEAD to point to `main` instead of `master` and save the `HEAD`
 
 We need to clear out the example code (different from the boilerplate code). We want to save the repo structure; we don't need the contents. There are `examples`, and `tests` that apply to the boilerplate that we're not going to need as developers of new modules.
 
-Note before you clear these things out, it's useful to actually understand what they are and why they're there. We'll be building our own as we go forward so we need to know what it is we're removing. If this isn't your first module, it's safe to fly through this. If this is your first (or your first several, even), take the time to read the code before you remove it.
+Note: Before you clear these things out, it's useful to actually understand what they are and why they're there. We'll be building our own as we go forward, so we need to know what it is we're removing. If this isn't your first module, it's safe to fly through this. If this is your first (or your first several, even), take the time to read the code before you remove it.
 
 ```shell
 cd path/to/this/repo
@@ -92,11 +92,11 @@ In this example module we generate text resources with the `random` provider in 
 ### Go Functional Tests
 
 - Modules are how Go manages dependencies
-- To initiate a new modules run the command: `go mod init [repo_url]`
+- To initiate a new module, run the command: `go mod init [repo_url]`
   - It is recommended to use the absolute repository url (e.g. github.com/launchbynttdata/launch-terraform-template)
 - Relative path is highly discouraged in Go, use absolute path to import a package
   - (e.g. `github.com/launchbynttdata/launch-terraform-template/[path_to_file]`)
-- To update paths or versions run the command: `go get -t ./...`  go will update the dependencies accordingly
+- To update paths or versions, run the command: `go get -t ./...`; Go will update the dependencies accordingly
 
 ### Workflows
 
