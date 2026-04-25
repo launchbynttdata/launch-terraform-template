@@ -5,10 +5,10 @@
 
 ## Overview
 
-What does this module do? What resource does it provide? Fill in this section with a description of the module, and the `terraform-docs` call during the `pre-commit` hook will populate tables with specifics around versions, resources, inputs, and outputs.
+What does this module do? What resource does it provide? Fill in this section with a description of the module, and the `terraform-docs` call during the `pre-commit` hook will populate tables with specifics around versions, resources, inputs, and outputs. Don't make changes outside of this Overview section.
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
+<!-- END_TF_DOCS -->
 
 ## Module Development
 
