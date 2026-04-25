@@ -13,6 +13,8 @@ This repo is intended to be used as a template for any new TF module.
 
 > [!CAUTION]
 > Your changes only belong in this repo if they modify the default module, examples, tests, or documentation used for Terraform Primitive templating purposes. If you need to make changes to the shared configuration files and workflows, see the [launch-terraform-skeleton](https://github.com/launchbynttdata/launch-terraform-skeleton) repository.
+>
+> If you need to create a new Terraform module, see the launch-terraform-modules](https://github.com/launchbynttdata/launch-terraform-modules) repository.
 
 ## Pre-Requisites
 
@@ -26,7 +28,7 @@ Additionally, your `git` user and email must be configured. Run the `make config
 
 ### Templating
 
-#### Version Control (VCS) Templating
+#### GitHub Templating
 
 This repository is used as a GitHub template by the [launch-terraform-modules](https://github.com/launchbynttdata/launch-terraform-modules) repository. If you are a Launch Engineer who needs to create a new Terraform module, you should start there.
 
@@ -34,16 +36,13 @@ This repository is used as a GitHub template by the [launch-terraform-modules](h
 
 This applies to systems like Azure DevOps and CodeCommit.
 
-We need to clone the repo, rename it, and start a fresh git history to get rid of the `poc-template` history. Below is a loose explanation of how to do this.
+We need to clone the repo and start a fresh git history to get rid of the `launch-terraform-template` history. Below is a loose explanation of how to do this.
 
 ``` shell
-git clone <this repo's URL>
-mv launch-terraform-template tf-<whatever it is you're building>
+git clone <this repo's URL> tf-<whatever it is you're building>
 cd tf-<whatever it is you're building>
 rm -rf .git
-git init
-vi .git/HEAD
-Change the HEAD to point to `main` instead of `master` and save the `HEAD`
+git init -b main
 ```
 
 #### Remove Educational Material
