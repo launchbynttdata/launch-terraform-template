@@ -11,5 +11,6 @@
 // limitations under the License.
 
 output "string" {
-  value = format("%s🍰%s", module.cake_prefix.string, module.cake_suffix.string)
+  description = "The random string to be generated (with cake)."
+  value       = format("%s🍰%s", module.cake_prefix.string, module.cake_suffix.string)
 }

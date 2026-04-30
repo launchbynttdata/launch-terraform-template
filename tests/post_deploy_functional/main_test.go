@@ -15,9 +15,9 @@ package test
 import (
 	"testing"
 
+	"github.com/launchbynttdata/launch-terraform-template/tests/testimpl"
 	"github.com/launchbynttdata/lcaf-component-terratest/lib"
 	"github.com/launchbynttdata/lcaf-component-terratest/types"
-	"github.com/nttdtest/poc-template/tests/testimpl"
 )
 
 const (
