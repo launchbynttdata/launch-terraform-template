@@ -5,7 +5,6 @@ go 1.26
 require (
 	github.com/gruntwork-io/terratest v0.56.0
 	github.com/launchbynttdata/lcaf-component-terratest v1.0.4
-	github.com/nttdtest/poc-template v0.0.0-20260405004700-f364a3f7adff
 	github.com/stretchr/testify v1.11.1
 )
 

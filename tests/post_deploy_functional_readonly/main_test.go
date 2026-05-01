@@ -15,9 +15,9 @@ package test
 import (
 	"testing"
 
+	"github.com/launchbynttdata/launch-terraform-template/tests/testimpl"
 	"github.com/launchbynttdata/lcaf-component-terratest/lib"
 	"github.com/launchbynttdata/lcaf-component-terratest/types"
-	"github.com/nttdtest/poc-template/tests/testimpl"
 )
 
 const (
@@ -33,5 +33,5 @@ func TestTemplateModule(t *testing.T) {
 		SetTestConfigFileName(infraTFVarFileNameDefault).
 		Build()
 
-	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestComposableComplete)
+	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestComposableCompleteReadOnly)
 }

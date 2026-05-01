@@ -33,11 +33,11 @@ This demonstrates a minimum example module that produces some output for the tes
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_length"></a> [length](#input\_length) | n/a | `number` | `24` | no |
+| <a name="input_length"></a> [length](#input\_length) | Length of the random string to generate. | `number` | `24` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_string"></a> [string](#output\_string) | n/a |
+| <a name="output_string"></a> [string](#output\_string) | The random string to be generated (with cake). |
 <!-- END_TF_DOCS -->
