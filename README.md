@@ -131,13 +131,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_length"></a> [length](#input\_length) | n/a | `number` | `24` | no |
-| <a name="input_number"></a> [number](#input\_number) | n/a | `bool` | `true` | no |
-| <a name="input_special"></a> [special](#input\_special) | n/a | `bool` | `false` | no |
+| <a name="input_length"></a> [length](#input\_length) | Length of the random string to generate. | `number` | `24` | no |
+| <a name="input_number"></a> [number](#input\_number) | Whether the random string should include numbers. Defaults to true. | `bool` | `true` | no |
+| <a name="input_special"></a> [special](#input\_special) | Whether the random string should include special characters. Defaults to false. | `bool` | `false` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_string"></a> [string](#output\_string) | n/a |
+| <a name="output_string"></a> [string](#output\_string) | The random string generated from the configured inputs. |
 <!-- END_TF_DOCS -->

@@ -11,5 +11,6 @@
 // limitations under the License.
 
 output "string" {
-  value = random_string.string.result
+  description = "The random string generated from the configured inputs."
+  value       = random_string.string.result
 }

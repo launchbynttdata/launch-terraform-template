@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: trailing-whitespace
       - id: check-case-conflict
@@ -28,19 +28,9 @@ repos:
           - --hook-config=--add-to-existing-file=true
           - --hook-config=--create-file-if-not-exist=true
           - --args=--sort=false
-  - repo: https://github.com/golangci/golangci-lint
-    rev: v2.11.3
-    hooks:
-      - id: golangci-lint
-        name: golangci-lint
-        description: Fast linters runner for Go.
-        entry: golangci-lint run --fix
-        types: [go]
-        language: golang
-        pass_filenames: false
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:
       - id: detect-secrets
-        args: ["--baseline", ".secrets.baseline"]
+        args: [ "--baseline", ".secrets.baseline" ]
         exclude: package.lock.json

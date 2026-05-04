@@ -11,6 +11,12 @@
 // limitations under the License.
 
 variable "length" {
-  type    = number
-  default = 24
+  description = "Length of the random string to generate."
+  type        = number
+  default     = 24
+
+  validation {
+    condition     = var.length > 0 && var.length < 100
+    error_message = "Length must be a positive integer less than 100."
+  }
 }

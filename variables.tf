@@ -11,16 +11,24 @@
 // limitations under the License.
 
 variable "length" {
-  type    = number
-  default = 24
+  description = "Length of the random string to generate."
+  type        = number
+  default     = 24
+
+  validation {
+    condition     = var.length > 0 && var.length < 100
+    error_message = "Length must be a positive integer less than 100."
+  }
 }
 
 variable "number" {
-  type    = bool
-  default = true
+  description = "Whether the random string should include numbers. Defaults to true."
+  type        = bool
+  default     = true
 }
 
 variable "special" {
-  type    = bool
-  default = false
+  description = "Whether the random string should include special characters. Defaults to false."
+  type        = bool
+  default     = false
 }
