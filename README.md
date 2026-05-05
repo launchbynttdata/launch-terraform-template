@@ -7,6 +7,25 @@
 
 This repository contains an example Terraform module that is designed to be transformed into another module.
 
+```mermaid
+flowchart RL
+    template -->|Pulls latest changes| skeleton
+    primitives -->|Pulls latest changes| skeleton
+    template --->|Used in producing module repositories| modules
+    modules -->|Produces| primitives
+
+    youarehere["<h3>You Are Here</h3>"]
+    youarehere ==> template
+
+    template["<strong><a href="https://github.com/launchbynttdata/launch-terraform-template">launch-terraform-template</a></strong><br/><br/>Implements launch-terraform-skeleton, provides a starting point for expected files that make up a Launch Terraform primitive. This repository is used as a template source when other repositories are created."]
+
+    primitives["<strong><a href="https://github.com/orgs/launchbynttdata/repositories?q=module_primitive">Terraform Primitives</a></strong><br/><br/>Launch's Terraform modules, plus their tests, one per repository. These modules regularly look for updates in launch-terraform-skeleton and autoupdate themselves where possible."]
+
+    modules["<strong><a href="https://github.com/launchbynttdata/launch-terraform-modules">launch-terraform-modules</a></strong><br/><br/>Terragrunt repository defining all of our Terraform primitive modules. Our existing modules will be imported here, our new modules will be configured here going forward."]
+
+    skeleton["<strong><a href="https://github.com/launchbynttdata/launch-terraform-skeleton">launch-terraform-skeleton</a></strong><br><br/>Common workflows and configurations shared by<br/>Terraform modules. Updates to this repository are<br/>consumed by the repositories that implement it<br/>on a regular schedule."]
+```
+
 ## How to Use This Repo
 
 This repo is intended to be used as a template for any new TF module.
