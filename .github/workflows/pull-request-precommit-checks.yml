@@ -20,7 +20,7 @@ jobs:
 
       - id: setup-python
         name: Set up Python 3.14
-        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b
+        uses: astral-sh/setup-uv@cec208311dfd045dd5311c1add060b2062131d57
         with:
           python-version: 3.14
 
@@ -63,12 +63,12 @@ jobs:
 
       - id: pre-commit
         name: Run pre-commit checks
-        run: uv run pre-commit run --all-files
+        run: uv run pre-commit run --all-files --show-diff-on-failure
 
       - id: set-status-check
         name: Set Status Check
         if: always()
-        uses: launchbynttdata/launch-workflows/.github/actions/update-status-check@0.15.2
+        uses: launchbynttdata/launch-workflows/.github/actions/update-status-check@088489d7b5f9ee3e0f63110b7fa5a13f7fd523e2
         with:
           check_name: "Pre-Commit Checks"
           status: ${{ steps.pre-commit.outcome == 'success' && 'success' ||
