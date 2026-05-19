@@ -63,12 +63,12 @@ jobs:
 
       - id: pre-commit
         name: Run pre-commit checks
-        run: uv run pre-commit run --all-files
+        run: uv run pre-commit run --all-files --show-diff-on-failure
 
       - id: set-status-check
         name: Set Status Check
         if: always()
-        uses: launchbynttdata/launch-workflows/.github/actions/update-status-check@0.15.4
+        uses: launchbynttdata/launch-workflows/.github/actions/update-status-check@edddecdce4590f94f30d0fdfdf991d8a692fe8dd
         with:
           check_name: "Pre-Commit Checks"
           status: ${{ steps.pre-commit.outcome == 'success' && 'success' ||
